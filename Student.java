@@ -1,6 +1,6 @@
 package CourseSystem;
 
-public class Student {
+public class Student implements StudentInterface{
     private int courseId;
     private int   fee;
     private String courseType;

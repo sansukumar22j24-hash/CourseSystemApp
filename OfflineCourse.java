@@ -1,33 +1,24 @@
 package CourseSystem;
 
-public class OfflineCourse {
-    private int courseId;
-    private int  fee;
+public class OfflineCourse extends Course implements OfflineInterface {
 
-    public int getCourseId() {
-        return courseId;
-    }
-
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
-    }
-
-    public int getFee() {
-        return fee;
-    }
-
-    public void setFee(int fee) {
-        this.fee = fee;
-    }
-    public int  enroll(int weeks){
-        int enroll= weeks*1000;
-        this.fee=enroll;
-        return this.fee;
-    }
     public void getLabAccess(){
         System.out.println("Lab Access Granted");
     }
-    void dropout(){
-        System.out.println("Dropout Processed");
+//    public void enroll(int weeks) {
+//        int value = weeks * 1000;
+//        this.setFee(value);
+//        System.out.println("Fee: " + this.getFee());
+//        System.out.println("Offline enrollment successful");
+//    }
+
+    public void enroll(int weeks, int days) {
+        int n = (7 - days);
+        int value = weeks * 1000 * n;
+        this.setFee(value);
+        System.out.println("Fee");
+        System.out.println(  this.getFee());
     }
+
+
 }

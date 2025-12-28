@@ -59,7 +59,7 @@ public class Main {
                 offlineCourse.getLabAccess();
 
 
-                 }
+            }
             else{
                 System.out.println("===== STUDENT 2: OFFLINE =====");
                 System.out.println("Enrollment Successful");
@@ -68,7 +68,7 @@ public class Main {
                 int a = offlineCourse.enroll(student2.getDurationWeek());
                 System.out.println(a);
                 offlineCourse.getLabAccess();
-               offlineCourse.dropout();
+                offlineCourse.dropout();
 
 
 
